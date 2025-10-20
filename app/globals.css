@@ -1,26 +1,138 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5% 64.9%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* make body take full height */
+  overflow-y: auto; /* prevent scrolling */
+  font-family: var(--font-jetbrains), monospace; /* or Poppins */
+  background-color: #000;
+  color: #fff;
+  line-height: 1.75;
+}
+.h1 {
+  @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+}
+.h2 {
+  @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+}
+.h3 {
+  @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+} /* Global image blend for black background */
+.mix-blend-lighten {
+  mix-blend-mode: lighten;
+  background-color: black; /* ensures proper blending */
+}
+.text {
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+  animation: text-animation 1s linear infinite;
+  position: relative; /* Needed for absolute children */
+}
+.text::before,
+.text::after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.text::before {
+  animation: text-animation-top 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+.text::after {
+  animation: text-animation-bottom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+@keyframes text-animation {
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+@keyframes text-animation-top {
+  2%,
+  64% {
+    transform: translate(2px, -2px);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+@keyframes text-animation-bottom {
+  2%,
+  64% {
+    transform: translate(-2px, 0);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0);
+  }
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
+}
+@media (max-width: 320px) {
+  .stats h3 {
+    font-size: 14px; /* shrink numbers */
+  }
+
+  .stats p {
+    font-size: 10px; /* shrink labels */
+  }
+
+  .stats {
+    gap: 6px; /* tighten spacing */
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.text-outline {
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+  transition: -webkit-text-stroke 0.3s ease;
+}
+
+.group:hover .text-outline {
+  -webkit-text-stroke: 1px #00ff99;
 }
