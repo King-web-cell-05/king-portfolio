@@ -1,18 +1,23 @@
+/* eslint-disable react/no-unescaped-entities */
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Socials from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Services from "@/components/services/Services";
-import Resume from "@/components/resume/Resume"
-import Work from "@/components/work/Work"
-import Contact from "@/components/contact/Contact"
+import Resume from "@/components/resume/Resume";
+import Work from "@/components/work/Work";
+import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
 
 const Home = () => {
   return (
-    <section id="home" className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-50 overflow-visible max-[700px]:top-70 max-[1250px]:top-95">
-      
+    <section
+      id="home"
+      className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-50 overflow-visible max-[700px]:top-70 max-[1250px]:top-95"
+    >
       <div className="container mx-auto h-full flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-between gap-2 sm:gap-12 xl:gap-15 relative">
         <div className="flex flex-col items-center xl:items-start text-center xl:text-left order-2 xl:order-none relative z-10 px-2 sm:px-0">
           <span className="block text-xs sm:text-base max-[320px]:text-[7px]">
@@ -20,7 +25,7 @@ const Home = () => {
           </span>
 
           <h1 className="h1 mb-2 sm:mb-3 text-xl sm:text-4xl max-[320px]:text-[12px]">
-            Hello I'm{" "}
+            Hello I&apos;m{" "}
             <span className="text-emerald-300 xl:whitespace-nowrap">
               Dada Kingsley
             </span>
@@ -28,7 +33,7 @@ const Home = () => {
 
           <p className="max-w-[500px] mb-1 sm:mb-9 text-white/80 text-xs sm:text-base mx-auto xl:mx-0 max-[320px]:text-[8px] leading-tight">
             I excel in crafting efficient and scalable software solutions that
-            drive innovation and enhanc e user experiences.
+            drive innovation and enhance user experiences.
           </p>
 
           <div className="flex flex-col xl:flex-row items-center gap-2 sm:gap-8 justify-center xl:justify-start">
@@ -57,36 +62,31 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Stats integrated into the hero section */}
-          <div className="mt-10 w-full flex justify-center xl:justify-start max-[600px] max-[600px]:scale-100">
+          <div className="mt-10 w-full flex justify-center xl:justify-start max-[600px]:scale-100">
             <Stats />
           </div>
         </div>
 
-        {/* Right side: Photo */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 order-1 xl:static xl:order-none mb-3 sm:mb-8 xl:mb-0 z-0 scale-90 sm:scale-100 max-[280px]:scale-[0.5] min-[400px]:scale-[1.2] min-[700px]:-top-36 min-[280px]:-top-35">
           <Photo />
         </div>
       </div>
 
-      {/* Services Section */}
       <section id="services" className="w-full mt-20 sm:mt-28">
         <Services />
       </section>
-       <section id="resume" className="w-full mt-20 sm:mt-28">
+      <section id="resume" className="w-full mt-20 sm:mt-28">
         <Resume />
       </section>
-       <section id="work" className="w-full mt-150 sm:mt-28">
+      <section id="work" className="w-full mt-20 sm:mt-28">
         <Work />
       </section>
-        <section id="contact" className="w-full mt-45 sm:mt-28">
+      <section id="contact" className="w-full mt-20 sm:mt-28">
         <Contact />
       </section>
-        <section id="resume" className="w-full mt-20 sm:mt-28">
-        <Footer/>
+      <section id="footer" className="w-full mt-20 sm:mt-28">
+        <Footer />
       </section>
-
-
     </section>
   );
 };
