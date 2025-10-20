@@ -4,11 +4,7 @@ import ClientHeader from "@/components/ClientHeader";
 import Pagetransition from "@/components/Pagetransition";
 import Stairtransition from "@/components/Stairtransition";
 import { ReactNode } from "react";
-import Services from "@/components/services/Services";
-import Home from "./page";
-import Contact from "@/components/contact/Contact";
-import Work from "@/components/work/Work";
-import Resume from "@/components/resume/Resume";
+
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],

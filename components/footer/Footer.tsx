@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -9,18 +11,14 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import profilePic from "@/public/king-pic.jpg"
 import Image from "next/image";
-
+import profilePic from "@/public/king-pic.jpg";
 
 const Footer = () => {
   const socialLinks = [
     { icon: <FaGithub />, url: "https://github.com/King-web-cell-05" },
     { icon: <FaLinkedin />, url: "https://wa.me/+2349065644691" },
-    {
-      icon: <FaTwitter />,
-      url: "https://x.com/codekingz05?t=9O_LxxKQkQT5DRWOxohwvw&s=08",
-    },
+    { icon: <FaTwitter />, url: "https://x.com/codekingz05?t=9O_LxxKQkQT5DRWOxohwvw&s=08" },
   ];
 
   const quickLinks = [
@@ -34,24 +32,9 @@ const Footer = () => {
   const services = ["Web Development", "UI/UX Design", "Graphic Design"];
 
   const contactInfo = [
-    {
-      icon: <FaPhoneAlt />,
-      title: "Phone",
-      description: "+2349065644691",
-      href: "tel:+2349065644691",
-    },
-    {
-      icon: <FaEnvelope />,
-      title: "Email",
-      description: "kingsleydada159@gmail.com",
-      href: "mailto:kingsleydada159@gmail.com",
-    },
-    {
-      icon: <FaMapMarkerAlt />,
-      title: "Address",
-      description: "No 4 Idera street, Oworoshoki",
-      href: "https://goo.gl/maps/your-map-link",
-    },
+    { icon: <FaPhoneAlt />, title: "Phone", description: "+2349065644691", href: "tel:+2349065644691" },
+    { icon: <FaEnvelope />, title: "Email", description: "kingsleydada159@gmail.com", href: "mailto:kingsleydada159@gmail.com" },
+    { icon: <FaMapMarkerAlt />, title: "Address", description: "No 4 Idera street, Oworoshoki", href: "https://goo.gl/maps/your-map-link" },
   ];
 
   return (
@@ -64,27 +47,26 @@ const Footer = () => {
     >
       <div className="container mx-auto px-6 xl:px-0 flex flex-col xl:flex-row justify-between gap-12 xl:gap-24">
         {/* Branding */}
-        <div className=" xl:text-left">
-            <div className="flex gap-5">
-                       <div className="w-12 h-12 xl:w-15 xl:h-15 relative rounded-full overflow-hidden border-2 border-emerald-300">
-                        <Image
-                          src={profilePic}
-                          alt="Kingsley"
-                          fill
-                          className="object-cover"
-                          priority
-                        />
-                      </div>
-          <h1 className="text mt-2" title="Kingsley">
-            Kingsley<span className="text-emerald-300">.</span>
-          </h1>
+        <div className="xl:text-left">
+          <div className="flex gap-5">
+            <div className="w-12 h-12 xl:w-15 xl:h-15 relative rounded-full overflow-hidden border-2 border-emerald-300">
+              <Image
+                src={profilePic}
+                alt="Kingsley"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
+            <h1 className="text mt-2" title="Kingsley">
+              Kingsley<span className="text-emerald-300">.</span>
+            </h1>
+          </div>
           <p className="text-white/70 mt-3 max-w-xs mx-auto xl:mx-0">
-            Crafting beautiful web experiences with passion & precision. Let's
+            Crafting beautiful web experiences with passion &amp; precision. Let&apos;s
             build something amazing together.
           </p>
 
-          {/* Socials */}
           <div className="flex justify-center xl:justify-start gap-6 mt-6 text-2xl">
             {socialLinks.map((social, idx) => (
               <motion.a
@@ -103,9 +85,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div className="flex-1 text-center xl:text-left">
-          <h2 className="text-xl font-semibold mb-4 text-emerald-300">
-            Quick Links
-          </h2>
+          <h2 className="text-xl font-semibold mb-4 text-emerald-300">Quick Links</h2>
           <ul className="flex flex-col gap-3">
             {quickLinks.map((link, idx) => (
               <motion.li
@@ -121,9 +101,7 @@ const Footer = () => {
 
         {/* Services */}
         <div className="flex-1 text-center xl:text-left">
-          <h2 className="text-xl font-semibold mb-4 text-emerald-300">
-            Services
-          </h2>
+          <h2 className="text-xl font-semibold mb-4 text-emerald-300">Services</h2>
           <ul className="flex flex-col gap-3">
             {services.map((service, idx) => (
               <motion.li
@@ -139,9 +117,7 @@ const Footer = () => {
 
         {/* Contact */}
         <div className="flex-1 text-center xl:text-left">
-          <h2 className="text-xl font-semibold mb-4 text-emerald-300">
-            Contact
-          </h2>
+          <h2 className="text-xl font-semibold mb-4 text-emerald-300">Contact</h2>
           <ul className="flex flex-col gap-4">
             {contactInfo.map((item, idx) => (
               <motion.li
@@ -164,13 +140,10 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom */}
       <div className="mt-16 border-t border-white/10 pt-6 text-center text-white/50 text-sm flex flex-col items-center gap-2">
         <span>
-          &copy; {new Date().getFullYear()} Kingsley Oluwasanmi. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Kingsley Oluwasanmi. All rights reserved.
         </span>
-     
       </div>
     </motion.footer>
   );
