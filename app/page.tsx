@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-50 overflow-visible max-[700px]:top-70 max-[1250px]:top-95"
+      className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-50 overflow-visible max-[400px]:top-80 max-[700px]:top-110 max-[1250px]:top-95"
     >
       <div className="container mx-auto h-full flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-between gap-2 sm:gap-12 xl:gap-15 relative">
         <div className="flex flex-col items-center xl:items-start text-center xl:text-left order-2 xl:order-none relative z-10 px-2 sm:px-0">
@@ -78,13 +78,14 @@ const Home = () => {
       <section id="resume" className="w-full mt-20 sm:mt-28">
         <Resume />
       </section>
-      <section id="work" className="w-full mt-20 sm:mt-28">
+  <section id="work" className="w-full mt-20 max-[600px]:mt-120 sm:mt-28">
+
         <Work />
       </section>
       <section id="contact" className="w-full mt-20 sm:mt-28">
         <Contact />
       </section>
-      <section id="footer" className="w-full mt-20 sm:mt-28">
+      <section id="footer" className="w-full mt-20 sm:mt-80 ">
         <Footer />
       </section>
     </section>
