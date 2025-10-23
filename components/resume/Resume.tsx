@@ -236,7 +236,7 @@ const Resume = () => {
           </TabsTrigger>
         </TabsList>
 
-        <div className="relative w-full xl:min-w-[800px] min-h-[400px] -mt-25 min-[400px]:top-45 min-[340px]:top-45 min-[640px]:top-60 min-[1280px]:top-1 min-[640px]:bottom-3">
+        <div className="relative w-full xl:min-w-[800px] min-h-[400px] -mt-25 min-[400px]:top-45 min-[240px]:top-45 min-[640px]:top-60 min-[1280px]:top-1 min-[640px]:bottom-3">
           {/* experience */}
           <TabsContent
             value="experience"
