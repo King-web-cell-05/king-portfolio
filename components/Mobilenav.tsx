@@ -12,6 +12,7 @@ const links = [
   { name: "contact", id: "contact" },
 ];
 
+
 const Mobilenav = () => {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");

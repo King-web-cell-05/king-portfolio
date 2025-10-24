@@ -126,7 +126,7 @@ const handleSlideChange = (swiper: SwiperType) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition:{delay:1, duration:0.4, ease:"easeIn"},
      }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0 mt-30"
     >
       <motion.div
   initial={{ opacity: 0, y: 30 }}
@@ -227,7 +227,7 @@ const handleSlideChange = (swiper: SwiperType) => {
                   </div>
                   {/* image */}
                   <div className="relative w-full h-full max-[700px]:scale-[1] ">
-                    <Image src={project.image} fill alt="project-image" className="object-cover"/>
+                    <Image src={project.image} fill alt="project-image" className="object-cover "/>
                   </div>
                   </div>
                 </SwiperSlide>

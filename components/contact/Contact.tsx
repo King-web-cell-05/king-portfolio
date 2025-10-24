@@ -80,7 +80,7 @@ const Contact = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.4, duration: 0.6 } }}
-      className="overflow-hidden "
+      className="overflow-hidden mt-50 "
     >
       {/* Header */}
       <div className="text-center mb-12">

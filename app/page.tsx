@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-50 overflow-visible max-[400px]:top-80 max-[700px]:top-110 max-[1250px]:top-95"
+      className="min-h-screen relative flex flex-col items-center justify-center xl:items-start xl:justify-between xl:pt-50 overflow-visible max-[400px]:top-65 max-[700px]:top-100 max-[1250px]:top-95"
     >
       <div className="container mx-auto h-full flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-between gap-2 sm:gap-12 xl:gap-15 relative">
         <div className="flex flex-col items-center xl:items-start text-center xl:text-left order-2 xl:order-none relative z-10 px-2 sm:px-0">

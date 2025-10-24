@@ -178,7 +178,7 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 1, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[100vh] flex flex-col items-center justify-center  py-16 sm:py-20 "
+      className="min-h-[100vh] flex flex-col items-center justify-center  py-16 sm:py-20 mt-30"
     >
             {/* Header */}
       <motion.div
