@@ -12,7 +12,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import Image from "next/image";
-import profilePic from "@/public/king-pic.jpg";
+import footerPic from "@/public/king-pic.jpg";
 
 const Footer = () => {
   const socialLinks = [
@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="flex gap-5">
             <div className="w-12 h-12 xl:w-15 xl:h-15 relative rounded-full overflow-hidden border-2 border-emerald-300">
               <Image
-                src={profilePic}
+                src={footerPic}
                 alt="Kingsley"
                 fill
                 className="object-cover"
