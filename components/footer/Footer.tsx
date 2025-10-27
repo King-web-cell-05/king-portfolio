@@ -34,7 +34,7 @@ const Footer = () => {
   const contactInfo = [
     { icon: <FaPhoneAlt />, title: "Phone", description: "+2349065644691", href: "tel:+2349065644691" },
     { icon: <FaEnvelope />, title: "Email", description: "kingsleydada159@gmail.com", href: "mailto:kingsleydada159@gmail.com" },
-    { icon: <FaMapMarkerAlt />, title: "Address", description: "No 4 Idera street, Oworoshoki", href: "https://goo.gl/maps/your-map-link" },
+    { icon: <FaMapMarkerAlt />, title: "Address", description: "No 4 Idera street, Oworoshoki", href: "https://www.google.com/maps/place/4+Idera+St,+Oworosoki,+Lagos+105102,+Lagos/@6.5499947,3.3968455,916m/data=!3m2!1e3!4b1!4m6!3m5!1s0x103b8d41e26e4197:0x7366c4b437feb8a3!8m2!3d6.5499894!4d3.3994204!16s%2Fg%2F11t16_3rs0?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D" },
   ];
 
   return (

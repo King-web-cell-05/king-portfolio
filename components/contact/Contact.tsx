@@ -102,7 +102,7 @@ const Contact = () => {
   viewport={{ once: true }}
   className="flex-1 w-full flex justify-center"
 >
-  <div className="relative w-full max-w-[460px] bg-[#1a1a1f]/75 backdrop-blur-lg rounded-2xl p-7 sm:p-8 shadow-2xl flex flex-col sm:flex-row xl:flex-col items-center xl:items-start justify-center gap-6 border border-white/10">
+  <div className="relative w-full max-w-[410px] bg-[#1a1a1f]/75 backdrop-blur-lg rounded-2xl p-7 sm:p-8 shadow-2xl flex flex-col sm:flex-row xl:flex-col items-center xl:items-start justify-center gap-6 border border-white/10">
     {/* Image */}
     <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] xl:w-[340px] xl:h-[340px] rounded-xl overflow-hidden shadow-lg">
       <Image
