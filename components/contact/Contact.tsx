@@ -19,7 +19,19 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import contactImage from "@/public/contact-img.jpg";
 
-
+const info = [
+  { icon: <FaPhoneAlt />, title: "Phone", description: "+2349065644691" },
+  {
+    icon: <FaEnvelope />,
+    title: "Email",
+    description: "kingsleydada159@gmail.com",
+  },
+  {
+    icon: <FaMapMarkerAlt />,
+    title: "Address",
+    description: "No 4 Idera Street, Oworoshoki",
+  },
+];
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -82,7 +94,69 @@ const Contact = () => {
 
       {/* Main Content */}
       <div className="container mx-auto flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-40 px-4 sm:px-6 min-h-[60vh]">
-        
+        {/* Left Side: Image + Info */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="flex-1 w-full flex justify-center"
+        >
+          <div className="relative w-full max-w-[410px] bg-[#1a1a1f]/75 backdrop-blur-lg rounded-2xl p-7 sm:p-8 shadow-2xl flex flex-col sm:flex-row xl:flex-col items-center xl:items-start justify-center gap-6 border border-white/10">
+            {/* Image */}
+            <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] xl:w-[340px] xl:h-[340px] rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src={contactImage}
+                alt="Contact illustration"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+
+            {/* Description */}
+            <p className="text-white/80 text-center xl:text-left leading-relaxed text-md sm:text-base px-2 sm:px-0">
+              I am a{" "}
+              <span className="text-emerald-300 font-semibold">
+                Full-Stack Developer
+              </span>
+              ,{" "}
+              <span className="text-emerald-300 font-semibold">
+                UI/UX Designer
+              </span>
+              , and{" "}
+              <span className="text-emerald-300 font-semibold">
+                Graphic Designer
+              </span>
+              , I craft seamless, high-performance digital experiences that
+              combine innovation with visual excellence. My work focuses on
+              usability, brand consistency, and turning creative ideas into
+              purposeful designs.
+            </p>
+
+            {/* Contact Info */}
+            <ul className="flex flex-col gap-4 text-white w-full sm:w-auto">
+              {info.map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-3 hover:scale-[1.03] transition-transform"
+                >
+                  <div className="w-[50px] h-[50px] bg-gradient-to-br from-emerald-500/30 to-emerald-700/30 rounded-xl flex items-center justify-center text-emerald-300 text-2xl shadow-md backdrop-blur-md">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <p className="text-sm uppercase tracking-wider text-emerald-400/90">
+                      {item.title}
+                    </p>
+                    <h3 className="text-base sm:text-lg font-semibold text-white">
+                      {item.description}
+                    </h3>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
+
         {/* Right Side: Form */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
