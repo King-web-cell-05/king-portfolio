@@ -110,6 +110,21 @@ const projects = [
     live: "https://king-portfolio-nu.vercel.app/",
     github: "https://github.com/King-web-cell-05/kingsley-portfolio",
   },
+    {
+    num: "08",
+    category: "Full-Stack Framework",
+    title: "Barbing Website",
+    description:
+      "An interactive barbering website that allows users to book appointments and view services.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind.css" },
+      { name: "Typescript" },
+    ],
+    image: "/assets/work-images/2talk.png", 
+    live: "https://house-of-2talk-entertainment.vercel.app/",
+    github: "https://github.com/King-web-cell-05/2talk",
+  },
 ];
 
 
